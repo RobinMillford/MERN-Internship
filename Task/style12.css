@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #6c273f; /* Dark Red background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    background-color: #953555; /* Pinkish-Red background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    color: white;
+    font-family: sans-serif;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.registration-form {
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.registration-form table {
+    width: 100%;
+}
+
+.registration-form td {
+    padding: 10px;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    background-color: #953555; /* Pinkish-Red background color */
+    color: #6c273f; /* Dark Red text color */
+    border-bottom: 1px solid #6c273f; /* Dark Red border */
+    font-family: sans-serif;
+}
+
+.registration-form input:focus,
+.registration-form textarea:focus,
+.registration-form select:focus {
+    border-bottom: 2px solid #6c273f; /* Dark Red border */
+    outline: none;
+}
+
+.registration-form .submit {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #2c2c2c;
+    background-color: #953555; /* Pinkish-Red background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.registration-form .submit:hover {
+    box-shadow: 3px 3px 6px rgba(108, 39, 63, 0.6); /* Dark Red shadow */
+}

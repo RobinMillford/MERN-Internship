@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .center {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <caption>Registration form</caption>
+  <tr>
+    <td>First Name:</td>
+    <td><input type="text" name="first_name"></td>
+    <td>Last Name:</td>
+    <td><input type="text" name="last_name"></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><input type="email" name="email"></td>
+    <td>Password:</td>
+    <td><input type="password" name="password"></td>
+  </tr>
+  <tr>
+    <td>Re-enter Password:</td>
+    <td><input type="password" name="re_password"></td>
+    <td>Gender:</td>
+    <td>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+    </td>
+  </tr>
+  <tr>
+    <td>Age:</td>
+    <td><input type="number" name="age"></td>
+    <td>Phone Number:</td>
+    <td><input type="tel" name="phone_number"></td>
+  </tr>
+  <tr>
+    <td>Address:</td>
+    <td><input type="text" name="address"></td>
+    <td>State:</td>
+    <td><input type="text" name="state"></td>
+  </tr>
+  <tr>
+    <td>Country:</td>
+    <td>
+      <select name="country">
+        <option value="Choose your country">Choose your country</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="UK">UK</option>
+      </select>
+    </td>
+    <td>Languages known:</td>
+    <td>
+      <input type="checkbox" name="languages_known" value="English"> English
+      <input type="checkbox" name="languages_known" value="Kannada"> Kannada
+      <input type="checkbox" name="languages_known" value="Hindi"> Hindi
+      <input type="checkbox" name="languages_known" value="Telugu"> Telugu
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" class="center">
+      <input type="checkbox" name="declaration" value="true"> Hereby I declare all the given details are true
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" class="center">
+      <input type="submit" value="Register">
+      <input type="button" value="Log in to Ethnus website">
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
