@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number</title>
+</head>
+<body>
+    <script>
+        function reverseNumber(x) {
+            const numString = x.toString();
+            const reversedString = numString.split('').reverse().join('');
+            const reversedNumber = parseInt(reversedString);
+            return reversedNumber;
+        }
+
+        const x = 32243;
+        const reversed = reverseNumber(x);
+
+        // Display in the browser console
+        console.log("Original Number:", x);
+        console.log("Reversed Number:", reversed);
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <p id="nameError" class="error"></p>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="error"></p>
+        </div>
+        <div>
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" required>
+            <p id="websiteError" class="error"></p>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <p id="messageError" class="error"></p>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Reset error messages
+            const errorElements = document.querySelectorAll(".error");
+            errorElements.forEach(element => {
+                element.textContent = "";
+            });
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const website = document.getElementById("website").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            // Validate Name
+            if (name === "") {
+                document.getElementById("nameError").textContent = "This field is required";
+                isValid = false;
+            }
+
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById("emailError").textContent = "A valid email address is required";
+                isValid = false;
+            }
+
+            // Validate Website URL
+            const urlRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+            if (!urlRegex.test(website)) {
+                document.getElementById("websiteError").textContent = "A valid URL is required";
+                isValid = false;
+            }
+
+            // Validate Message
+            if (message === "") {
+                document.getElementById("messageError").textContent = "This field is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

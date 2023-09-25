@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Add Bootstrap CSS link or CDN here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add your custom CSS styles here -->
+  <style>
+    /* Add your custom CSS styles here */
+    /* You can use the styles you provided earlier for the form styling */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .invalid-feedback {
+      display: block;
+      color: red;
+    }
+    .center-button {
+      text-align: center;
+    }
+    .custom-submit {
+      width: 200px; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the button horizontally */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <form>
+    <div class="form-group mb-3">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        required
+      />
+      <div class="invalid-feedback">Name is required</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        required
+      />
+      <div class="invalid-feedback">Email is required</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        minlength="8"
+        required
+      />
+      <div class="invalid-feedback">Password is required</div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="hobbies">Hobbies</label>
+      <select class="form-control" id="hobbies">
+        <option value="">Select an option</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+    </div>
+    <div class="form-group center-button">
+      <button type="submit" class="btn btn-danger btn-block custom-submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<!-- Add Bootstrap JS and Popper.js if needed -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

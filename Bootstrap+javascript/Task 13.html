@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Control</title>
+    <style>
+        #animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: #0077c0;
+            position: relative;
+            animation: moveRight 2s linear infinite;
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 200px;
+            }
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0077c0;
+        }
+    </style>
+</head>
+<body>
+    <div id="animation-box"></div>
+    <div class="button-container">
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+    </div>
+
+    <script>
+        let animationInterval;
+
+        function startAnimation() {
+            const animationBox = document.getElementById("animation-box");
+            animationBox.style.animationPlayState = "running";
+        }
+
+        function stopAnimation() {
+            const animationBox = document.getElementById("animation-box");
+            animationBox.style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+</html>

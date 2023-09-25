@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, red, yellow);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px; /* Wider form */
+        }
+
+        .overlay legend {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #FF6347;
+        }
+
+        /* Additional styles */
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-check-label {
+            margin-left: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <form class="well form-horizontal" action="#" method="post" id="contact_form">
+            <fieldset>
+                <legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+                        </div>
+                        <div class="error-message" id="first_name_error"></div>
+                    </div>
+                </div>
+
+                <!-- Add other form fields here -->
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+                        </div>
+                        <div class="error-message" id="last_name_error"></div>
+                    </div>
+                </div>
+
+                <!-- Email ID -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Email ID</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="Email ID" class="form-control" type="email" required>
+                        </div>
+                        <div class="error-message" id="email_error"></div>
+                    </div>
+                </div>
+                <!-- Password -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Password</label>
+    <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input name="password" placeholder="Password" class="form-control" type="password" required>
+        </div>
+        <div class="error-message" id="password_error"></div>
+    </div>
+</div>
+
+<!-- Re-Password -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Re-enter Password</label>
+    <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input name="repassword" placeholder="Re-enter Password" class="form-control" type="password" required>
+        </div>
+        <div class="error-message" id="repassword_error"></div>
+    </div>
+</div>
+                <!-- Gender -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Gender</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="Male">
+                            <label class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" value="Female">
+                            <label class="form-check-label">Female</label>
+                        </div>
+                    </div>
+                </div>
+                                <!-- Age -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Age</label>
+    <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input name="age" placeholder="Age" class="form-control" type="number" required>
+        </div>
+        <div class="error-message" id="age_error"></div>
+    </div>
+</div>
+
+
+
+                <!-- Mobile Number -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Mobile Number</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input name="phone" placeholder="Mobile Number" class="form-control" type="tel" required>
+                        </div>
+                        <div class="error-message" id="phone_error"></div>
+                    </div>
+                </div>
+
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Date of Birth (DOB)</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <select name="birthday_day" id="birthday_day">
+                            <option value="-1">Day:</option>
+                            <!-- Add day options here -->
+                        </select>
+                        <select name="birthday_month" id="birthday_month">
+                            <option value="-1">Month:</option>
+                            <!-- Add month options here -->
+                        </select>
+                        <select name="birthday_year" id="birthday_year">
+                            <option value="-1">Year:</option>
+                            <!-- Add year options here -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="address" placeholder="Address" class="form-control" type="text" required>
+                        </div>
+                        <div class="error-message" id="address_error"></div>
+                    </div>
+                </div>
+
+                <!-- City -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="city" placeholder="City" class="form-control" type="text" required>
+                        </div>
+                        <div class="error-message" id="city_error"></div>
+                    </div>
+                </div>
+
+                <!-- Pin Code -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Pin Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="pin_code" placeholder="Pin Code" class="form-control" type="number" required>
+                        </div>
+                        <div class="error-message" id="pin_code_error"></div>
+                    </div>
+                </div>
+
+                <!-- State -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">State</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input name="state" placeholder="State" class="form-control" type="text" required>
+                        </div>
+                        <div class="error-message" id="state_error"></div>
+                    </div>
+                </div>
+
+                <!-- Country -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Country</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="country" class="form-control selectpicker" required>
+                                <option value="">Choose your country</option>
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <!-- Add more countries here -->
+                            </select>
+                        </div>
+                        <div class="error-message" id="country_error"></div>
+                    </div>
+                </div>
+
+                <!-- Languages Known -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Languages Known</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="languages[]" value="English">
+                            <label class="form-check-label">English</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="languages[]" value="Kannada">
+                            <label class="form-check-label">Kannada</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="languages[]" value="Hindi">
+                            <label class="form-check-label">Hindi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="languages[]" value="Telugu">
+                            <label class="form-check-label">Telugu</label>
+                        </div>
+                        <div class="error-message" id="languages_error"></div>
+                    </div>
+                </div>
+
+                <!-- Declaration -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">I declare all the given details are true</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <input type="checkbox" name="declaration" class="form-check-input" required>
+                        </div>
+                        <div class="error-message" id="declaration_error"></div>
+                    </div>
+                </div>
+
+                <!-- Log in to Ethnus website -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <a href="#" class="btn btn-link">Log in to Ethnus website</a>
+                    </div>
+                </div>
+
+                <!-- Register Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning">
+                            REGISTER
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+            document.getElementById('contact_form').addEventListener('submit', function(event) {
+        var isValid = true;
+        var errorMessage = '';
+
+        // Validate First Name
+        var firstName = document.querySelector('input[name="first_name"]').value;
+        if (!firstName || firstName.trim() === '') {
+            isValid = false;
+            errorMessage += 'First Name is required.\n';
+            document.getElementById('first_name_error').textContent = 'POOR';
+        } else {
+            document.getElementById('first_name_error').textContent = '';
+        }
+
+        // Validate Phone Number
+        var phone = document.querySelector('input[name="phone"]').value;
+        if (!phone || !isValidPhoneNumber(phone)) {
+            isValid = false;
+            errorMessage += 'Invalid Phone Number.\n';
+            document.getElementById('phone_error').textContent = 'POOR';
+        } else {
+            document.getElementById('phone_error').textContent = '';
+        }
+
+        // Validate Address
+        var address = document.querySelector('input[name="address"]').value;
+        if (!address || address.trim() === '') {
+            isValid = false;
+            errorMessage += 'Address is required.\n';
+            document.getElementById('address_error').textContent = 'POOR';
+        } else {
+            document.getElementById('address_error').textContent = '';
+        }
+
+        // Validate City
+        var city = document.querySelector('input[name="city"]').value;
+        if (!city || city.trim() === '') {
+            isValid = false;
+            errorMessage += 'City is required.\n';
+            document.getElementById('city_error').textContent = 'POOR';
+        } else {
+            document.getElementById('city_error').textContent = '';
+        }
+
+        // Validate Pin Code
+        var pinCode = document.querySelector('input[name="pin_code"]').value;
+        if (!pinCode || !isValidPinCode(pinCode)) {
+            isValid = false;
+            errorMessage += 'Invalid Pin Code.\n';
+            document.getElementById('pin_code_error').textContent = 'POOR';
+        } else {
+            document.getElementById('pin_code_error').textContent = '';
+        }
+
+        // Validate State
+        var state = document.querySelector('input[name="state"]').value;
+        if (!state || state.trim() === '') {
+            isValid = false;
+            errorMessage += 'State is required.\n';
+            document.getElementById('state_error').textContent = 'POOR';
+        } else {
+            document.getElementById('state_error').textContent = '';
+        }
+
+        // Validate Country
+        var country = document.querySelector('select[name="country"]').value;
+        if (!country || country.trim() === '') {
+            isValid = false;
+            errorMessage += 'Country is required.\n';
+            document.getElementById('country_error').textContent = 'POOR';
+        } else {
+            document.getElementById('country_error').textContent = '';
+        }
+
+        // Validate Languages Known
+        var languages = document.querySelectorAll('input[name="languages[]"]:checked');
+        if (!languages || languages.length === 0) {
+            isValid = false;
+            errorMessage += 'Languages Known is required.\n';
+            document.getElementById('languages_error').textContent = 'POOR';
+        } else {
+            document.getElementById('languages_error').textContent = '';
+        }
+
+        // Validate Declaration
+        var declaration = document.querySelector('input[name="declaration"]:checked');
+        if (!declaration) {
+            isValid = false;
+            errorMessage += 'You must declare that the given details are true.\n';
+            document.getElementById('declaration_error').textContent = 'POOR';
+        } else {
+            document.getElementById('declaration_error').textContent = '';
+        }
+
+        if (!isValid) {
+            alert(errorMessage);
+            event.preventDefault();
+        }
+        // Age validation
+var age = document.querySelector('input[name="age"]').value;
+if (!age || isNaN(age) || age < 18) {
+    isValid = false;
+    errorMessage += 'Age must be a valid number and at least 18 years old.\n';
+    document.getElementById('age_error').textContent = 'POOR';
+} else {
+    document.getElementById('age_error').textContent = '';
+}
+
+// Password validation
+var password = document.querySelector('input[name="password"]').value;
+if (!password || password.trim() === '') {
+    isValid = false;
+    errorMessage += 'Password is required.\n';
+    document.getElementById('password_error').textContent = 'POOR';
+} else {
+    document.getElementById('password_error').textContent = '';
+}
+
+// Re-password validation
+var repassword = document.querySelector('input[name="repassword"]').value;
+if (!repassword || repassword.trim() === '' || repassword !== password) {
+    isValid = false;
+    errorMessage += 'Passwords do not match.\n';
+    document.getElementById('repassword_error').textContent = 'POOR';
+} else {
+    document.getElementById('repassword_error').textContent = '';
+}
+
+    });
+
+    function isValidPhoneNumber(phone) {
+        // Simple phone number validation regex (for demonstration purposes)
+        var phoneRegex = /^\d{10}$/;
+        return phoneRegex.test(phone);
+    }
+
+    function isValidPinCode(pinCode) {
+        // Simple PIN code validation regex (for demonstration purposes)
+        var pinCodeRegex = /^\d{6}$/;
+        return pinCodeRegex.test(pinCode);
+    }
+    </script>
+</body>
+</html>

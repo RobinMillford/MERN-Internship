@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabetize String</title>
+</head>
+<body>
+    <h1>Alphabetize a String</h1>
+    <p>Original String: <span id="originalString">webmaster</span></p>
+    <p>Alphabetized String: <span id="result"></span></p>
+
+    <script>
+        function alphabetizeString(str) {
+            return str.split('').sort().join('');
+        }
+
+        // Get the original string
+        const originalString = document.getElementById('originalString').textContent;
+
+        // Alphabetize the string
+        const resultString = alphabetizeString(originalString);
+
+        // Display the result
+        document.getElementById('result').textContent = resultString;
+    </script>
+</body>
+</html>
